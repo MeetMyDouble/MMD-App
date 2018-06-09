@@ -1,13 +1,19 @@
 import React from "react"
-import {Text, View} from "react-native";
+import {Text, View, TouchableOpacity} from "react-native";
+
 
 
 export default class UploadPage extends React.Component{
 
+
+
+
     render(){
         return(
             <View>
-                <Text>Upload page</Text>
+                <TouchableOpacity onPress={() => {this.props.navigation.navigate('CameraPage')}}>
+                    <Text>Prendre une photo</Text>
+                </TouchableOpacity>
             </View>
         )
     }
